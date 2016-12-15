@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jgy.myapplication.MainActivity">
+
+    <Chronometer
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer1" />
+
+    <Button
+        android:text="예약 시작"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup1" >
+
+        <RadioButton
+            android:text="날짜 설정 (캘린더뷰)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton1"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="시간 설정"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <CalendarView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/calendarView1"
+                android:visibility="invisible"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+
+            <TimePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker1"
+                android:visibility="invisible"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+
+        </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="예약완료"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1" />
+
+    </LinearLayout>
+
+</LinearLayout>
